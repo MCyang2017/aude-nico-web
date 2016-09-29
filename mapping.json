@@ -1,0 +1,182 @@
+{
+    "state":"open",
+    "settings": {
+      "index": {
+        "creation_date":"1454577762611",
+         "analysis": {
+      "analyzer": {
+        "charSplit": {
+          "type": "custom",
+           "tokenizer": "ngram_tokenizer"
+        }
+      },
+     "tokenizer": {
+           "ngram_tokenizer": {
+             "type": "nGram",
+             "min_gram": "1",
+             "max_gram": "1",
+             "token_chars": [
+               "letter",
+               "digit",
+               "punctuation"
+             ]
+           }
+        }
+      }
+      }
+    },
+    "mappings": {
+       "posts": {
+          "properties": {
+             "__v": {
+                "type": "long"
+             },
+             "area": {
+                "type": "string"
+             },
+             "author": {
+               "type": "nested",
+                "properties": {
+                   "id": {
+                      "type": "long"
+                   },
+                   "nickname": {
+                      "type": "string"
+                   },
+                   "stamp_exp": {
+                      "type": "long"
+                   }
+                }
+             },
+             "category": {
+                "type": "string"
+             },
+             "comment_count": {
+                "type": "long"
+             },
+             "content": {
+               "analyzer":"charSplit",
+                "type": "string"
+             },
+             "country": {
+                "type": "string"
+             },
+             "created_at": {
+                "type": "date",
+                "format": "dateOptionalTime"
+             },
+             "errors": {
+                "properties": {
+                   "crack": {
+                      "type": "boolean"
+                   },
+                   "exists": {
+                      "type": "boolean"
+                   },
+                   "once": {
+                      "type": "boolean"
+                   },
+                   "storage": {
+                      "properties": {
+                         "local": {
+                            "type": "boolean"
+                         }
+                      }
+                   },
+                   "urls": {
+                      "type": "boolean"
+                   }
+                }
+             },
+             "get_at": {
+                "type": "date",
+                "format": "dateOptionalTime"
+             },
+             "lastget_at": {
+    "type": "date",
+    "format": "dateOptionalTime"
+},
+             "height": {
+                "type": "long"
+             },
+             "is_deleted": {
+                "type": "boolean"
+             },
+             "is_monetized": {
+                "type": "boolean"
+             },
+             "is_official": {
+                "type": "boolean"
+             },
+             "is_public": {
+                "type": "boolean"
+             },
+             "is_r18": {
+                "type": "boolean"
+             },
+             "language": {
+                "type": "string"
+             },
+             "length": {
+                "type": "long"
+             },
+             "main_genre": {
+                "type": "string"
+             },
+             "my_list_count": {
+                "type": "long"
+             },
+             "pixels": {
+                "type": "long"
+             },
+             "tags": {
+               "type":"nested",
+                "properties": {
+                   "dic": {
+                      "type": "boolean"
+                   },
+                   "name": {
+                      "type": "string"
+                   }
+                }
+             },
+             "thread_id": {
+                "type": "long"
+             },
+             "title": {
+               "analyzer":"charSplit",
+               "type": "string"
+             },
+             "type": {
+                "type": "string"
+             },
+             "urls": {
+                "properties": {
+                   "cookie": {
+                      "type": "string"
+                   },
+                   "get_at": {
+                      "type": "date",
+                      "format": "dateOptionalTime"
+                   },
+                   "type": {
+                      "type": "string"
+                   },
+                   "value": {
+                      "type": "string"
+                   },
+                   "vip": {
+                      "type": "boolean"
+                   }
+                }
+             },
+             "view_count": {
+                "type": "long"
+             },
+             "width": {
+                "type": "long"
+             }
+          }
+       }
+    }
+}

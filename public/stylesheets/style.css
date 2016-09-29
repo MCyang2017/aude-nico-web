@@ -1,0 +1,43 @@
+
+body {
+    font-size: 84%;
+    color: #333333;
+    line-height: 1.4;
+}
+
+a {
+    color: #34538b;
+}
+
+#Searchresult {
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    background: #f0f3f9;
+}
+
+#Pagination{
+  /*margin-left: 54%;*/
+}
+
+.normal_nav{
+  /*background-color: #34538b;*/
+  color: black;
+  display: inline-block;
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 14px;
+  text-shadow: #fff 0 1px 0;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+}
+.clicked_nav{
+    text-shadow: #004d7a 0 1px 0;
+    text-decoration: none;
+    color: #FFF;
+    background: #006099;
+}
